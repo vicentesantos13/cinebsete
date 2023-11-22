@@ -1,5 +1,5 @@
-'use client'
-import { useEntities } from "@/context/ContextHeader";
+"use client";
+import { useEntities } from "@/context/Context";
 import Image from "next/image";
 
 export const SearchComponent = () => {

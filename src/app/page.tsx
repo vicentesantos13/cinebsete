@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { MoviesArea } from "@/components/MoviesArea";
 import { SearchArea } from "@/components/SearchArea";
-import { EntitiesProvider } from "@/context/ContextHeader";
+import { EntitiesProvider } from "@/context/Context";
 
 export default function Home() {
   return (

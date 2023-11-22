@@ -1,11 +1,11 @@
 "use client";
 import { MovieFolder } from "./MovieFolder";
 import { useMovies } from "@/utils/queries";
-import { useEntities } from "@/context/ContextHeader";
+import { useEntities } from "@/context/Context";
 
 export const MoviesArea = () => {
-  const { movie } = useEntities();
-  const { data } = useMovies(movie);
+  const { movie,genreId } = useEntities();
+  const { data } = useMovies(movie,genreId);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:px-3 xl:max-w-7xl xl:px-0 m-auto w-full gap-6 ">

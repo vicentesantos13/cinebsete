@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query"
-import { getData, getGenres, searchMovies } from "./api"
+import { getData, getGenres } from "./api"
 
 
-export const useMovies = (movie?: string) => {
+export const useMovies = (movie?: string,genreId?:number) => {
 
     const query = useQuery({
-        queryKey: ['movies', movie],
-        queryFn: () => getData(movie)
+        queryKey: ['movies', movie,genreId],
+        queryFn: () => getData(movie,genreId)
     });
 
     return query;

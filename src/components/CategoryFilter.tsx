@@ -19,7 +19,7 @@ export const CategoryFilter = () => {
       {teste.data &&
         teste.data.map((item, index) => (
           <option key={index} value={item.id}>
-            {item.name}
+            {item.name}npm run dev
           </option>
         ))}
     </select>

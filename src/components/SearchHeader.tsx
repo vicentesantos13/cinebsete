@@ -1,14 +1,15 @@
 "use client";
 import { useEntities } from "@/context/Context";
-import { useState } from "react";
 import Image from "next/image";
 
 export const SearchHeader = () => {
-  const { setSearchActive, setMovie, text, setText } = useEntities();
+  const { setSearchActive, setMovie, text, setText, setGenreId } = useEntities();
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setMovie(text);
+      setGenreId(0);
+
     }
   };
 

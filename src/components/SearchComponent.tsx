@@ -3,11 +3,12 @@ import { useEntities } from "@/context/Context";
 import Image from "next/image";
 
 export const SearchComponent = () => {
-  const { setMovie, text, setText } = useEntities();
+  const { setMovie, text, setText,setGenreId } = useEntities();
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setMovie(text);
+      setGenreId(0);
     }
   };
   return (

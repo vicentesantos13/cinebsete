@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SearchHeader } from "./SearchHeader";
+import SearchHeader from "./SearchHeader";
 import { useEntities } from "@/context/Context";
 
 export const Header = () => {

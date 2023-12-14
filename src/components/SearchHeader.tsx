@@ -1,8 +1,9 @@
 "use client";
 import { useEntities } from "@/context/Context";
 import Image from "next/image";
+import {memo} from 'react'
 
-export const SearchHeader = () => {
+ const SearchHeader = () => {
   const { setSearchActive, setMovie, text, setText, setGenreId } = useEntities();
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -43,3 +44,6 @@ export const SearchHeader = () => {
     </div>
   );
 };
+
+
+export default memo(SearchHeader);
